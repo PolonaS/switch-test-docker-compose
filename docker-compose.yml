@@ -1,0 +1,19 @@
+web:
+    image: polona/switch-test
+    ports:
+        - 8080:20000
+    links:
+        - db
+    environment:
+        DB_HOST: db
+        DB_DATABASE: laravel
+        DB_USERNAME: root
+        DB_PASSWORD: root
+db:
+    image: centurylink/mysql
+    ports:
+        - 3306:20001
+    environment:
+        MYSQL_DATABASE: laravel
+        MYSQL_USER: root
+        MYSQL_PASSWORD: root
