@@ -1,7 +1,7 @@
 web:
     image: polona/switch-test
     ports:
-        - 8080:20000
+        - 8080:8080
     links:
         - db
     environment:
@@ -12,7 +12,7 @@ web:
 db:
     image: centurylink/mysql
     ports:
-        - 3306:20001
+        - 3306:3306
     environment:
         MYSQL_DATABASE: laravel
         MYSQL_USER: root
